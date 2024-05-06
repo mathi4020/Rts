@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #080710;
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            padding-top: 2cm;
+        }
+
+        .background {
+            width: 330px;
+            height: 520px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+        }
+
+        
+
+        form {
+            width: 50px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.13);
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            padding: 50px 35px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 42px;
+            text-align: center;
+        }
+        .fieldss{
+        
+        	margin-left: 6cm; 
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 500;
+            width:70%;
+
+        }
+
+        input {
+            
+            height: 40px; /* Reduced height */
+            width: 60%;
+            background-color: rgba(255, 255, 255, 0.07);
+            border-radius: 3px;
+            padding: 0 10px;
+            margin-top: 8px;
+            
+            font-size: 14px;
+            font-weight: 300;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        ::placeholder {
+            color: #e5e5e5;
+        }
+
+        button {
+            margin-top: 20px; /* Reduced margin */
+            margin-left: 6cm;
+            width: 100%;
+            background-color: #ffffff;
+            color: #080710;
+            padding: 12px 0; /* Reduced padding */
+            font-size: 16px; /* Reduced font size */
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btns{
+        margin-left:6cm;
+        }
+        
+    </style>
+    <script>
+    function loginnew(){
+    	window.location.href="http://localhost:8080/ATM/userlogin.html";
+    }</script>
+</head>
+<body>
+
+    <form class="container" action="register" method="get">
+        <h1>User Registration</h1>
+        <div class="fieldss">
+            <label for="name">Name</label>
+            <input type="text" name="name"  placeholder="Enter the Name" required/>
+
+            <label for="userid">User ID</label>
+            <input type="text" name="userid"  placeholder="Enter the User ID" required/>
+
+            <label for="pin">PIN</label>
+            <input type="number" name="pin"  placeholder="Enter the PIN no." required/>
+
+            <label for="contact">Mobile no.</label>
+            <input type="number" name="contact"  placeholder="Enter the Mobile No."  required/>
+        </div><br>
+       <div class="btns">
+        <div>
+            <input type="submit" name="login" value="Submit" class="btn btn-success"/><br>
+            <input type="reset" name="reset" value="Reset" class="btn btn-danger"/>
+        </div><br>
+        
+        	<div>
+                <input type="submit" name="login" value="Already, have an account, Log in" class="btn btn-warning" onclick="loginnew()"/>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
